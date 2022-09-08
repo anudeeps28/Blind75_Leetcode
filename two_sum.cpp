@@ -1,4 +1,6 @@
 #include <iostream>
+// #include <stdio.h>
+
 using namespace std;
 #include <vector>
 
@@ -28,13 +30,29 @@ public:
 };
 
 
+// this block is just for printing the elements of a vector
+template <typename S>
+ostream& operator<<(ostream& os,
+                    const vector<S>& vector)
+{
+    // Printing all the elements using <<
+    for (auto element : vector) {
+        os << element << " ";
+    }
+    return os;
+}
+
+
 int main()
 {
-    vector<int> A[] = {1,2,3,4};
+    vector<int> A = {1,2,3,4};
     int l = 4;
     Solution s;
 
-    s.twoSum(A,l);
+    vector<int> y  = s.twoSum(A,l);
+    cout << y << endl;
+    // printf("%d", y);
+    //print(a);
     cout << "this program is running fine!";
     return 0;
 }
