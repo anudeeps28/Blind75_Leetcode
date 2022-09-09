@@ -42,7 +42,7 @@ ostream& operator<<(ostream& os,
     return os;
 }
 
-
+// the main function = point of entry into the code
 int main()
 {
     vector<int> A = {1,2,3,4};
